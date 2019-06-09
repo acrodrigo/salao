@@ -444,5 +444,24 @@ function remover_nota($conexao, $id){
     }
 }
 
+function view_agendamento($conexao){
+    $sql_view = "CREATE VIEW IF NOT EXISTS agendamento_detalhes 
+    AS SELECT Agendamento.idAgendamento, cliente.nome, (servicos.nome) 
+    AS servicos_nome, servicos.preco, (funcionario.nome) AS funcionario_nome, Agendamento.dataHora 
+    FROM Agendamento INNER JOIN cliente ON (agendamento.Cliente_cpfCliente = cliente.cpfCliente) 
+    INNER JOIN servicos ON (agendamento.Servicos_idServico = servicos.idServico) 
+    INNER JOIN funcionario ON (funcionario.cpfFuncionario=agendamento.Funcionario_cpfFuncionario);";
+    $rel= 'SELECT * FROM agendamento_detalhes';
+
+    $result = mysqli_query($conexao, $sql_view);
+    $resultado = mysqli_query($conexao, $rel);
+
+    $agendamentos_detalhes = array();
+    while ($agendamento = mysqli_fetch_assoc($resultado)) {
+        $agendamentos_detalhes[] = $agendamento;
+    }
+    return $agendamentos_detalhes;
+}
+
 
 ?>
