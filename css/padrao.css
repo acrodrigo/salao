@@ -1,0 +1,58 @@
+html{ 
+    background-color:#e9ecef
+}
+
+body {
+    
+    margin: 0 auto;
+    background-color: #566787;
+  }
+
+ #botaocliente{
+     position: absolute;
+     right: 60%;
+     background: #e9ecef;
+     align-items: center;
+     align-content: center;
+     color: black
+     
+ }
+
+ #botaoproduto{
+    position: absolute;
+    right: 31.8%;
+    background: #e9ecef;
+    align-items: center;
+    align-content: center;
+    color: black
+    
+}
+
+#botaoservico{
+    position: absolute;
+    right: 60%;
+    background: #e9ecef;
+    align-items: center;
+    align-content: center;
+    color: black
+    
+}
+
+#botaofuncionario{
+    position: absolute;
+    right: 30%;
+    background: #e9ecef;
+    align-items: center;
+    align-content: center;
+    color: black
+    
+}
+
+#botaoagendamento{
+    
+    justify-content: center;
+    background: #e9ecef;
+    align-content: center;
+    color: black;
+    margin-left: 450px
+}
