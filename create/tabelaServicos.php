@@ -270,9 +270,11 @@ $(document).ready(function(){
                     <div class="col-sm-6">
 						<h2>Gerenciamento Serviços</h2>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-12">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicioanr novo Serviço</span></a>
+						<a href="#addEmployeeExp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicioanr Especialista</span></a>
 						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a>						
+						<a href="../index.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>
 					</div>
                 </div>
             </div>
@@ -285,7 +287,7 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>
                         </th>
-                        <th>idServico</th>
+                        <th>cpfFuncionario</th>
                         <th>Nome</th>
                         <th>Preço</th>
                         <th>Comissão</th>
@@ -350,6 +352,50 @@ $(document).ready(function(){
                         <div class="form-group">
 							<label>Comissão</label>
 							<input type="number" name="comissao" class="form-control" required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+						<input type="submit" class="btn btn-success" value="Adicionar">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="addEmployeeExp" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="validarEspecialista.php" method="post">
+					<div class="modal-header">						
+						<h4 class="modal-title">Adicionar Especialista</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+                        <div class="form-group">
+                            <label>Id Servico</label>
+                            <select name="idServico" id="idServico">
+            					<option value=""></option>
+            					<?php
+                					$result = "SELECT * FROM Servicos ORDER BY idServico";
+                					$res = mysqli_query($conexao, $result);
+                					while($row = mysqli_fetch_assoc($res)){
+                    					echo '<option style="color:black;" value="'.$row['idServico'].'">'.$row['nome'].'</option>';
+               	 					}
+            					?>
+        					</select><br><br>
+                        </div>
+						<div class="form-group">
+							<label>CPF Funcionario</label>
+							<select name="cpfFuncionario" id="cpfFuncionario">
+            					<option value=""></option>
+            					<?php
+                					$result = "SELECT * FROM Funcionario";
+                					$res = mysqli_query($conexao, $result);
+                					while($row = mysqli_fetch_assoc($res)){
+                    					echo '<option style="color:black;" value="'.$row['cpfFuncionario'].'">'.$row['nome'].'</option>';
+               	 					}
+            					?>
+        					</select><br><br>
 						</div>
 					</div>
 					<div class="modal-footer">

@@ -265,8 +265,7 @@ $(document).ready(function(){
     <?php
 
         include "../banco.php";
-        #$cliente = $_GET['id'];
-        
+            
         if($servico = buscar_servico($conexao, $_GET['id'])){
 			echo 'Chave encontrada';
         }else{

@@ -13,7 +13,7 @@
         <div clas="span10 offset1">
           <div class="card">
             <div class="card-header">
-                <h3 class="well"> Adicionar Cliente </h3>
+                <h3 class="well"> Adicionar Funcionario </h3>
             </div>
             <div class="card-body">
             <form class="form-horizontal" action="validarFuncionario.php" method="post">
@@ -91,7 +91,7 @@
                             <?php endif;?>
                     </div>
                 </div>
-
+                
                 <div class="form-actions">
                     <br/>
 

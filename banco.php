@@ -163,11 +163,41 @@ function gravar_funcionario($conexao, $funcionario){
 
     if(mysqli_query($conexao, $sql)){
         echo 'Ok inserido ';
+        return true;
+    }else{
+        echo "Error: ". mysqli_error($conexao);
+        return false;
+    }
+    #return mysqli_fetch_assoc($resultado);
+} 
+
+function gravar_funcionarioSalao($conexao, $funcionario){
+    
+    $sql = "INSERT INTO Salao VALUES";
+    $sql .= "(0, '$funcionario')";
+
+    if(mysqli_query($conexao, $sql)){
+        echo 'Ok inserido ';
     }else{
         echo "Error: ". mysqli_error($conexao);
     }
     #return mysqli_fetch_assoc($resultado);
 } 
+
+function gravar_funcionarioAdm($conexao, $funcionario){
+    
+    $sql = "INSERT INTO Administrativo VALUES";
+    $sql .= "('Adm', '$funcionario')";
+
+    if(mysqli_query($conexao, $sql)){
+        echo 'Ok inserido ';
+    }else{
+        echo "Error: ". mysqli_error($conexao);
+    }
+    #return mysqli_fetch_assoc($resultado);
+} 
+
+
 
 function gravar_produto($conexao, $produto){
     
@@ -246,6 +276,25 @@ function gravar_nota($conexao, $nota) {
     }
 
 }
+
+
+function adicionar_especialista($conexao, $especialista){
+    $id = $especialista['idServico'];
+    $cpf = $especialista['cpfFuncionario'];
+
+    $sql = "INSERT INTO Especialista VALUES";
+    $sql .= "('$id', '$cpf')";
+
+    if(mysqli_query($conexao, $sql)){
+        echo 'Ok inserido ';
+        return true;
+    }else{
+        echo "Error: ". mysqli_error($conexao);
+        return false;
+    }
+}
+
+
 
 // ---------------------- Upadate ------------------------------------------------
 function editar_cliente($conexao, $cliente){
@@ -377,6 +426,7 @@ function editar_nota($conexao, $nota) {
 
 // -------------------------- remove -------------------------------------------------
 
+// remover_funcionario em todas as tabelas
 function remover_cliente($conexao, $cpf){
     $sqlRemover = "DELETE FROM Cliente WHERE cpfCliente = {$cpf}";
     mysqli_query($conexao, $sqlRemover);
@@ -388,6 +438,7 @@ function remover_cliente($conexao, $cpf){
     }
 }
 
+// Editar aqui para remover o funcionario em todas as tabelas
 function remover_funcionario($conexao, $cpf){
     
     $sqlRemover = "DELETE FROM Funcionario WHERE cpfFuncionario = {$cpf}";

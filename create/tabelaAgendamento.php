@@ -272,7 +272,7 @@ $(document).ready(function(){
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicioanr novo Agendamento</span></a>
-						
+						<a href="../index.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>
 						<label for="">ID Serviços</label>
         					<select name="idServico" id="idServico">
             					<option value=""></option>

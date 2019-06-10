@@ -367,7 +367,7 @@ $lista_tarefas = buscar_funcionarios($conexao);
 						</div>	
 						<div class="form-group">
 							<label>Telefone 2</label>
-							<input type="tel" class="form-control" name="telefone2" required>
+							<input type="tel" class="form-control" name="telefone2">
 						</div>
 						<div class="form-group">
 							<label>Rua</label>
@@ -387,10 +387,19 @@ $lista_tarefas = buscar_funcionarios($conexao);
 						</div>
 						<div class="form-group">
 							<label>Horario de Saida</label>
-							<input type="time" min="9:00" max="18:00" class="form-control" name="horariofim" required>
+							<input type="time" min="7:00" max="20:00" class="form-control" name="horariofim" required>
 						</div>
 						
-					
+						<div class="control-group <?php echo (!empty($opcao1Erro) || !empty($opcao2Erro))?'error ': '';?>">
+							<label for="funcao" class="control-label">Funcao </label>
+							<br>
+							<input type="radio" name="opcao" value="adm" required id="funcao"> Administrativo
+							<input type="radio" name="opcao" value="sal"> Salão 
+							<?php if(!(empty($opcao1Erro) || empty($opcao2Erro))): ?>
+								<span class="help-inline"><?php echo $opcao1Erro; echo $opcao2Erro;?></span>
+							<?php endif;?>
+                		</div>
+
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
