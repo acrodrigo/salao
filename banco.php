@@ -205,12 +205,13 @@ function gravar_produto($conexao, $produto){
     $marca = $produto['marca'];
     $preco = $produto['preco'];
     $quantidade = $produto['quantidade'];
-
+    
     $sql = "INSERT INTO Produto VALUES";
     $sql .= "(null, '$nome', '$marca', '$preco', '$quantidade')";
 
     if(mysqli_query($conexao, $sql)){
         echo 'Ok inserido ';
+        
     }else{
         echo "Error: ". mysqli_error($conexao);
     }
@@ -455,7 +456,7 @@ function remover_funcionario($conexao, $cpf){
 }
 
 function remover_produto($conexao, $id){
-    $sqlRemover = "DELETE FROM Funcionario WHERE idProduto = {$id}";
+    $sqlRemover = "DELETE FROM produto WHERE idProduto = {$id}";
     mysqli_query($conexao, $sqlRemover);
     
     if(mysqli_query($conexao, $sqlRemover)){
@@ -463,6 +464,7 @@ function remover_produto($conexao, $id){
     }else{
         echo "Error: ". mysqli_error($conexao);
     }
+
 }
 
 function remover_servico($conexao, $id){
