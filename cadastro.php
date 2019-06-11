@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/padrao.css">
@@ -17,44 +17,57 @@ include "banco.php";
 <body>
 
     <div class="container">
-        <div class="jumbotron">
+      <br>
+      <br>
             <div class="row">
             <h2>Agendamento Salao </h2>
-        </div>
+        
     </div>
     <br>
+
+
+
+    <table class="table table-borderless">
+ 
+  <tbody>
+    <br>
+    <br>
     
-    <div class="row">
-      <div class="col-md-4">
-      <a id=botaocliente href="create/tabelaCliente.php" class="btn btn-success">
-        <img style="position: relative; width:300px; height:300px;"src="img/clientes.png">
-      </a>
-      </div>
-      <div class="col-md-4">
-      <a id="botaoservico" href="create/createServico.php" class="btn btn-success">
-        <img style="position: relative; width:300px; height:300px;" src="img/servicos.jpg">
-      </a>  
-      </div>
-      <div class="col-md-4">
-      <a id="botaofuncionario" href="create/createFuncionario.php" class="btn btn-success">
-        <img style="position: relative; width:300px; height:300px;" src="img/career.jpg">
-      </a>
-      </div>
-      <div class="col-md-4">
-      <a id="botaoproduto" href="create/createProduto.php" class="btn btn-success">
-        <img style="position: relative; width:300px; height:300px;" src="img/produto.png">
-      </a>
-      </div>
-      <div class="col-md-4">
-        <a id="botaosalario" href="create/tabelaNotas.php" class="btn btn-success">
-          <img style="position: relative; width:300px; height:300px;" src="img/invoice.jpg" >
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a id="botaoagendamento" href="formAgendamento.php" class="btn btn-success">
-          <img style="position: relative; width:300px; height:300px;" src="img/agendamento.png">
-        </a>
-      </div>
+    <tr>
+      <th scope="row"></th>
+      
+      <td><a id=btcliente href="create/tabelaCliente.php">
+			<img style="width:100px; height:100px;"src="img/clientes.png">
+      </a> </td>
+      
+      <td><a id="btservico" href="create/createServico.php">
+        <img style="width:100px; height:100px;" src="img/servicos.png">
+      </a> </td>
+
+      <td><a id="btproduto" href="create/createProduto.php" >
+        <img style="width:100px; height:100px;" src="img/produto.png">
+      </a></td>
+    </tr>
+    <tr>
+      <br>
+      
+      <th scope="row"></th>
+      <td><a id="btfuncionario" href="create/createFuncionario.php" >
+        <img style="width:100px; height:100px;" src="img/career.png">
+      </a></td>
+
+      <td><a id="btNotas" href="create/tabelaNotas.php" >
+          <img style="width:100px; height:100px;" src="img/invoice.png" >
+        </a></td>
+      <td><a id="btAgendamento" href="formAgendamento.php" >
+          <img style="width:100px; height:100px;" src="img/agendamento.png">
+        </a></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+      
         <?php
           //echo "Agendamentos -- - ";
           //include "html/agendamento.php";
