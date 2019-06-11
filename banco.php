@@ -495,5 +495,61 @@ function remover_nota($conexao, $id){
     }
 }
 
+################################## Login ##############################
+
+function confirmar_login($conexao, $id){
+    $usuario = $id['usuario'];
+    $senha = $id['senha'];
+echo $usuario;
+
+$sqlBusca = "SELECT * FROM autenticacao WHERE usuario = '{$usuario}' AND
+senha ='{$senha}'";
+    $resultado = mysqli_query($conexao, $sqlBusca);
+    
+    $cadastrados = array();
+    while ($cadastrado = mysqli_fetch_assoc($resultado)) {
+        $cadastrados[] = $cadastrado;
+        
+    }
+    return $cadastrados;
+    
+}
+
+
+function verificar_login($conexao, $id){
+
+    $cpf = $id['cpf'];
+    $usuario = $id['usuario'];
+    $senha = $id['senha'];
+
+$sqlBusca = "SELECT * FROM funcionario WHERE cpfFuncionario = '{$cpf}'";
+    $resultado = mysqli_query($conexao, $sqlBusca);
+    
+    $cadastrados = array();
+    while ($cadastrado = mysqli_fetch_assoc($resultado)) {
+        $cadastrados[] = $cadastrado;
+        
+    }
+    return $cadastrados;
+    
+}
+
+function cadastrar_login($conexao, $id){
+    
+    $cpf = $id['cpf'];
+    $usuario = $id['usuario'];
+    $senha = $id['senha'];
+    
+    $sql = "INSERT INTO autenticacao VALUES";
+    $sql .= "('$usuario', '$senha', '$cpf')";
+
+    if(mysqli_query($conexao, $sql)){
+        echo 'Ok inserido ';
+        header('Location: ../index.php');
+    }else{
+        echo "Error: ". mysqli_error($conexao);
+    }
+    
+}
 
 ?>
