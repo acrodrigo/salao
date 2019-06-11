@@ -46,8 +46,8 @@ include "banco.php";
       </a>
       </div>
       <div class="col-md-4">
-        <a id="botaosalario" href="create/createSalario.php" class="btn btn-success">
-          <img style="position: relative; width:300px; height:300px;" src="img/salario.jpg" >
+        <a id="botaosalario" href="create/tabelaNotas.php" class="btn btn-success">
+          <img style="position: relative; width:300px; height:300px;" src="img/invoice.jpg" >
         </a>
       </div>
       <div class="col-md-4">
