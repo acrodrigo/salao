@@ -259,8 +259,8 @@ $(document).ready(function(){
 </script>
 </head>
 <?php
- include '../banco.php';
- $lista_agendamentos = buscar_agendamentos($conexao);
+ include '../../banco.php';
+ $lista_detalhes_agendamento = view_agendamento($conexao);
 ?>
 <body>
     <div class="container">
@@ -268,12 +268,21 @@ $(document).ready(function(){
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Gerenciamento Agendamentos</h2>
+						<h2>Detalhes</h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="views/viewAgendamento.php" class="btn btn-warning" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Detalhes dos agendamentos</span></a>
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicioanr novo Agendamento</span></a>
 						<a href="../index.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>
+						<!--<label for="">ID Serviços</label>
+        					<select name="idServico" id="idServico">
+            					<option value=""></option>
+            					<?php
+                					$result = "SELECT * FROM Servicos ORDER BY idServico";
+                					$res = mysqli_query($conexao, $result);
+                					while($row = mysqli_fetch_assoc($res)){
+                    					echo '<option style="color:black;" value="'.$row['idServico'].'">'.$row['nome'].'</option>';
+               	 					}
+            					?>
+        					</select><br><br>-->
 						<!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<form class="form-inline mr-auto" action="../search/buscaAgendamento.php" method="post">
 							<input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -287,43 +296,34 @@ $(document).ready(function(){
                 <thead>
                     <tr>
 						<th>
-							<!--<span class="custom-checkbox">
+							<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span>-->
+							</span>
                         </th>
 						<th>Id do Agendamento</th>
-						<th>Cpf do Cliente</th>
-                        <th>Id do Serviço-Nome do Serviço</th>
-                        <th>Cpf do Funcionario</th>
-                        <th>Data|Hora</th>
-                        <th>Ações</th>
+						<th>Nome do Cliente</th>
+                        <th>Nome do Serviço</th>
+                        <th>Preço</th>
+                        <th>Nome do Funcionario</th>
+                        <th>Data e Hora</th>
                     </tr>
                 </thead>
                 <tbody>
 					<!-- Adicioanar while do php com a mysql_query-->
-					<?php foreach ($lista_agendamentos as $agendamento_info) : ?>
+					<?php foreach ($lista_detalhes_agendamento as $detalhe_agendamento) : ?>
                     <tr>
 						<td>
-							<!--<span class="custom-checkbox">
+							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
-							</span>-->
+							</span>
 						</td>
-                       	<td><?php echo $agendamento_info['idAgendamento']; ?></td>
-                        <td><?php echo $agendamento_info['Cliente_cpfCliente']; ?></td>
-						<td><?php 
-							$result = "SELECT * FROM Servicos WHERE idServico=".$agendamento_info['Servicos_idServico'];
-							$res = mysqli_query($conexao, $result);
-							$row = mysqli_fetch_assoc($res);
-							echo $agendamento_info['Servicos_idServico'],"-",$row['nome']; 
-							?></td>
-                        <td><?php echo $agendamento_info['Funcionario_cpfFuncionario']; ?></td>
-                        <td><?php echo $agendamento_info['dataHora']; ?></td>
-                        <td>
-                            <a href="../editar/editarAgendamento.php?id=<?php echo $agendamento_info['idAgendamento']; ?>" class="edit" data-toggle="modal"> <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="../remover/removerAgendamento.php?id=<?php echo $agendamento_info['idAgendamento']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
+                       	<td><?php echo $detalhe_agendamento['idAgendamento']; ?></td>
+                        <td><?php echo $detalhe_agendamento['nome']; ?></td>
+						<td><?php echo $detalhe_agendamento['servicos_nome']?></td>
+                        <td><?php echo $detalhe_agendamento['funcionario_nome']; ?></td>
+                        <td><?php echo $detalhe_agendamento['dataHora']; ?></td>
 					</tr>
 					<?php endforeach ?>
                     <!--Final-->
@@ -331,50 +331,5 @@ $(document).ready(function(){
             </table>
         </div>
     </div>
-	<!-- Edit Modal HTML -->
-	<div id="addEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="validarAgendamento.php" method="post">
-					<div class="modal-header">						
-						<h4 class="modal-title">Adicionar novo Agendamento</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">					
-                        <div class="form-group">
-                            <label>Cpf do Cliente</label>
-                            <input type="text" name="Cliente_cpfCliente" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Serviços</label>
-							<select class="form-control" name="Servicos_idServico" id="idServico">
-								<option></option>
-								<?php
-                					$result = "SELECT * FROM Servicos ORDER BY idServico";
-                					$res = mysqli_query($conexao, $result);
-                					while($row = mysqli_fetch_assoc($res)){
-                    					echo '<option style="color:black;" value="'.$row['idServico'].'">'.$row['nome'].'</option>';
-										}
-										echo $row['nome'];
-            					?>
-							<select>
-						</div>
-                        <div class="form-group">
-                            <label>Cpf Funcionario</label>
-                            <input type="text" name="Funcionario_cpfFuncionario" class="form-control" required>
-                        </div>
-						<div class="form-group">
-							<label>Data|Hora</label>
-							<input type="datetime-local" name="dataHora" class="form-control" required>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-						<input type="submit" class="btn btn-success" value="Adicionar">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 </body>
 </html>                                		                            
