@@ -271,19 +271,9 @@ $(document).ready(function(){
 						<h2>Gerenciamento Agendamentos</h2>
 					</div>
 					<div class="col-sm-6">
+						<a href="views/viewAgendamento.php" class="btn btn-warning" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Detalhes dos agendamentos</span></a>
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicioanr novo Agendamento</span></a>
 						<a href="../index.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>
-						<label for="">ID Serviços</label>
-        					<select name="idServico" id="idServico">
-            					<option value=""></option>
-            					<?php
-                					$result = "SELECT * FROM Servicos ORDER BY idServico";
-                					$res = mysqli_query($conexao, $result);
-                					while($row = mysqli_fetch_assoc($res)){
-                    					echo '<option style="color:black;" value="'.$row['idServico'].'">'.$row['nome'].'</option>';
-               	 					}
-            					?>
-        					</select><br><br>
 						<!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<form class="form-inline mr-auto" action="../search/buscaAgendamento.php" method="post">
 							<input class="form-control" type="text" placeholder="Search" aria-label="Search">
