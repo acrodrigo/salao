@@ -286,7 +286,7 @@ $lista_tarefas = buscar_produtos($conexao);
 								<label for="selectAll"></label>
 							</span>-->
                         </th>
-                        <th>idProduto</th>
+                        <!--<th>idProduto</th>-->
                         <th>Nome</th>
                         <th>Marca</th>
                         <th>Preço</th>
@@ -304,7 +304,7 @@ $lista_tarefas = buscar_produtos($conexao);
 								<label for="checkbox1"></label>
 							</span>-->
 						</td>
-                        <td><?php echo $produto['idProduto']; ?></td>
+                        <!--<td><?php// echo $produto['idProduto']; ?></td>-->
                         <td><?php echo $produto['nome']; ?></td>
 						<td><?php echo $produto['marca']; ?></td>
 						<td><?php echo $produto['preco']; ?></td>
@@ -377,10 +377,10 @@ $lista_tarefas = buscar_produtos($conexao);
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <label>idProduto</label>
                                 <input type="text" class="form-control" required>
-                            </div>
+                            </div>-->
                             <div class="form-group">
                                 <label>Nome</label>
                                 <input type="nome" class="form-control" required>

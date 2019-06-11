@@ -318,7 +318,7 @@ $(document).ready(function(){
             <div class="card-body">
             <form class="form-horizontal" action="confirmarEdicaoProduto.php" method="post">
 
-                <div class="control-group">
+                <div hidden class="control-group">
                     <label class="control-label">idProduto</label>
                     <div class="controls">
                         <input size="11" class="form-control" name="idProduto" type="text" required="" value="<?php echo $produto['idProduto']; ?>">
