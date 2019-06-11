@@ -309,7 +309,7 @@ $(document).ready(function(){
                     </div>
                 </div>
 
-                <div class="control-group <?php echo !empty($comissaoErro)?'error ': '';?>">
+                <div hidden class="control-group <?php echo !empty($comissaoErro)?'error ': '';?>">
                     <label class="control-label">Comissao</label>
                     <div class="controls">
                         <input size="11" class="form-control" name="comissao" type="text" required="" value="<?php echo $servico['comissao'];?>">

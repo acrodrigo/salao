@@ -290,7 +290,7 @@ $(document).ready(function(){
                         <th>cpfFuncionario</th>
                         <th>Nome</th>
                         <th>Preço</th>
-                        <th>Comissão</th>
+                        <!--<th>Comissão</th>-->
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -307,7 +307,7 @@ $(document).ready(function(){
                         <td><?php echo $servico_info['idServico']; ?></td>
                         <td><?php echo $servico_info['nome']; ?></td>
 						<td><?php echo $servico_info['preco']; ?></td>
-						<td><?php echo $servico_info['comissao']; ?></td>
+						<!--<td><?php// echo $servico_info['comissao']; ?></td>-->
                         <td>
                             <a href="../editar/editarServico.php?id=<?php echo $servico_info['idServico']; ?>" class="edit" data-toggle="modal"> <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="../remover/removerServico.php?id=<?php echo $servico_info['idServico']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -348,11 +348,12 @@ $(document).ready(function(){
 						<div class="form-group">
 							<label>Preço</label>
 							<input type="number" name="preco" class="form-control" required>
-                        </div>
+						</div>
+						<!--
                         <div class="form-group">
 							<label>Comissão</label>
 							<input type="number" name="comissao" class="form-control" required>
-						</div>
+						</div> -->
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
