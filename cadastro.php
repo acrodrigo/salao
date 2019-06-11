@@ -40,11 +40,11 @@ include "banco.php";
 			<img style="width:100px; height:100px;"src="img/clientes.png">
       </a> </td>
       
-      <td><a id="btservico" href="create/createServico.php">
+      <td><a id="btservico" href="create/tabelaServicos.php">
         <img style="width:100px; height:100px;" src="img/servicos.png">
       </a> </td>
 
-      <td><a id="btproduto" href="create/createProduto.php" >
+      <td><a id="btproduto" href="create/tabelaProdutos.php" >
         <img style="width:100px; height:100px;" src="img/produto.png">
       </a></td>
     </tr>
@@ -52,14 +52,14 @@ include "banco.php";
       <br>
       
       <th scope="row"></th>
-      <td><a id="btfuncionario" href="create/createFuncionario.php" >
+      <td><a id="btfuncionario" href="create/tabelaFuncionarios.php" >
         <img style="width:100px; height:100px;" src="img/career.png">
       </a></td>
 
       <td><a id="btNotas" href="create/tabelaNotas.php" >
           <img style="width:100px; height:100px;" src="img/invoice.png" >
         </a></td>
-      <td><a id="btAgendamento" href="formAgendamento.php" >
+      <td><a id="btAgendamento" href="create/tabelaAgendamento.php" >
           <img style="width:100px; height:100px;" src="img/agendamento.png">
         </a></td>
     </tr>
