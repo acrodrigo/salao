@@ -289,7 +289,7 @@ $(document).ready(function(){
                         <input  size="45" class="form-control" name="idNota" type="text" value="<?php echo $nota['idNota']; ?>" >
                     </div>
                 </div>
-                <div class="control-group <?php echo !empty($nomeErro)?'error ': '';?>">
+                <div hidden class="control-group <?php echo !empty($nomeErro)?'error ': '';?>">
                     <label class="control-label">Cpf Cliente</label>
                     <div class="controls">
                         <input size="45" class="form-control" name="Cliente_cpfCliente" type="text" required="" value="<?php echo $nota['Cliente_cpfCliente']; ?>">

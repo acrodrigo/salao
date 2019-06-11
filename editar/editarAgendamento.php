@@ -279,7 +279,7 @@ $(document).ready(function(){
             </div>
             <div class="card-body">
             <form class="form-horizontal" action="confirmarEdicaoAgendamento.php" method="post">
-			<div style="display:none;" class="control-group <?php echo !empty($nomeErro)?'error ': '';?>">
+			<div hidden style="display:none;" class="control-group <?php echo !empty($nomeErro)?'error ': '';?>">
                     <label class="control-label">Id do Agendamento</label>
                     <div class="controls">
                         <input  size="45" class="form-control" name="idAgendamento" type="text" value="<?php echo $agendamento['idAgendamento']; ?>" >

@@ -286,7 +286,7 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>-->
                         </th>
-						<th>idNota</th>
+						<!--<th>idNota</th>-->
 						<th>Cpf do Cliente</th>
                         <th>Total Bruto</th>
                         <th>Total Liquido</th>
@@ -305,7 +305,7 @@ $(document).ready(function(){
 								<label for="checkbox1"></label>
 							</span>-->
 						</td>
-                       	<td><?php echo $nota_info['idNota']; ?></td>
+                       	<!--<td><?php// echo $nota_info['idNota']; ?></td>-->
                         <td><?php echo $nota_info['Cliente_cpfCliente']; ?></td>
 						<td><?php echo $nota_info['totalBruto']; ?></td>
 						<td><?php echo $nota_info['totalLiquido']; ?></td>
