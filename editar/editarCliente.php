@@ -271,19 +271,20 @@ $(document).ready(function(){
 
 <body>
     
-    <?php
+<?php
 
-        include "../banco.php";
-        #$cliente = $_GET['id'];
-        
-        if($cliente = buscar_cliente($conexao, $_GET['id'])){
-            echo 'Chave encontrada';
-        }else{
-            echo $cliente .' Chave invalida para Edicao';
-            die();
-        }
+include "../banco.php";
+#$cliente = $_GET['id'];
 
-    ?>
+if($cliente = buscar_cliente($conexao, $_GET['id'])){
+	echo 'Chave encontrada';
+	$cpfantigo = $cliente['cpfCliente'];
+}else{
+	echo $cliente .' Chave invalida para Edicao';
+	die();
+}
+
+?>
 
 <div id="editEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
@@ -360,11 +361,18 @@ $(document).ready(function(){
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label">Telefone - (Opicional)</label>
+                    <label class="control-label">Telefone - (Opcional)</label>
                     <div class="controls">
                         <input size="11" class="form-control" name="telefone2" type="text" value="<?php $cliente['telefone2']; ?>">
                     </div>
-                </div>
+				</div>
+				
+				<div class="control-group" hidden>
+                    <label class="control-label">cpfantigo</label>
+                    <div class="controls">
+                        <input size="11" class="form-control" name="cpfantigo" type="text" value="<?php echo $cpfantigo; ?>">
+                    </div>
+				</div>
 
                 <div class="form-actions">
                     <br/>

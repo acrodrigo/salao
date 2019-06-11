@@ -9,6 +9,8 @@ $cliente['nome'] = $_POST['nome'];
 $cliente['telefone1'] = $_POST['telefone'];
 $cliente['telefone2'] = $_POST['telefone2'];
 
+$cliente['cpfantigo'] = $_POST['cpfantigo'];
+
 editar_cliente($conexao, $cliente);
 header('Location: ../create/tabelaCliente.php');
 ?>

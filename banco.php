@@ -304,13 +304,16 @@ function editar_cliente($conexao, $cliente){
     $tele1 = $cliente['telefone1'];
     $tele2 = $cliente['telefone2'];
 
+    $cpfantigo = $cliente['cpfantigo'];
+
     $sql = "UPDATE Cliente SET 
-        nome='$nome', telefone1='$tele1', telefone2='$tele2' 
-        WHERE cpfCliente=$cpf";
+        nome='$nome', telefone1='$tele1', telefone2='$tele2' ,
+        cpfCliente='$cpf'
+        WHERE cpfCliente=$cpfantigo";
 
     #mysqli_query($conexao, $sql);
     if(mysqli_query($conexao, $sql)){
-        echo 'Foi Alerado ';
+        echo 'Foi Alterado ';
     }else{
         echo "Error: ". mysqli_error($conexao);
     }
