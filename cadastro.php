@@ -25,23 +25,36 @@ include "banco.php";
     <br>
     
     <div class="row">
-        <p>
-            <a id =botaocliente href="create/tabelaCliente.php" class="btn btn-success">Adicionar Cliente</a>
-            
-            <a id =botaofuncionario href="create/createFuncionario.php" class="btn btn-success">Adicionar Funcionario</a>
-            <br>
-            <br>
-            <a id =botaoservico href="create/createServico.php" class="btn btn-success">Adicionar Servico</a>
-            <a id =botaoproduto href="create/createProduto.php" class="btn btn-success">Adicionar Produto</a>
-            <br>
-            <br>
-            <a id= botaoagendamento href="formAgendamento.php" class="btn btn-success">Adicionar Agendamento</a>
-            <br>
-            <br>
-            <a id= botaosalario href="create/createSalario.php" class="btn btn-success">Adicionar Salario</a>
-        </p>
-
-
+      <div class="col-md-4">
+      <a id=botaocliente href="create/tabelaCliente.php" class="btn btn-success">
+        <img style="position: relative; width:300px; height:300px;"src="img/clientes.png">
+      </a>
+      </div>
+      <div class="col-md-4">
+      <a id="botaoservico" href="create/createServico.php" class="btn btn-success">
+        <img style="position: relative; width:300px; height:300px;" src="img/servicos.jpg">
+      </a>  
+      </div>
+      <div class="col-md-4">
+      <a id="botaofuncionario" href="create/createFuncionario.php" class="btn btn-success">
+        <img style="position: relative; width:300px; height:300px;" src="img/career.jpg">
+      </a>
+      </div>
+      <div class="col-md-4">
+      <a id="botaoproduto" href="create/createProduto.php" class="btn btn-success">
+        <img style="position: relative; width:300px; height:300px;" src="img/produto.png">
+      </a>
+      </div>
+      <div class="col-md-4">
+        <a id="botaosalario" href="create/tabelaNotas.php" class="btn btn-success">
+          <img style="position: relative; width:300px; height:300px;" src="img/invoice.jpg" >
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a id="botaoagendamento" href="formAgendamento.php" class="btn btn-success">
+          <img style="position: relative; width:300px; height:300px;" src="img/agendamento.png">
+        </a>
+      </div>
         <?php
           //echo "Agendamentos -- - ";
           //include "html/agendamento.php";
@@ -70,11 +83,6 @@ include "banco.php";
           //echo "Produtos -- - ";
           //include "html/produto.php";
         ?> 
-
-
-
-
-        
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
