@@ -10,8 +10,9 @@ if($cliente == ' '){
     if(remover_cliente($conexao, $_GET['id'])){
     
     }else{
-        echo 'Agum erro';
-        die();
+        //echo 'Agum erro';
+        //die();
+        header('Location: ../create/tabelaCliente.php');
     }
 }
 

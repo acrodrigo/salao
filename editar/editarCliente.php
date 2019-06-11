@@ -277,7 +277,7 @@ include "../banco.php";
 #$cliente = $_GET['id'];
 
 if($cliente = buscar_cliente($conexao, $_GET['id'])){
-	echo 'Chave encontrada';
+	//echo 'Chave encontrada';
 	$cpfantigo = $cliente['cpfCliente'];
 }else{
 	echo $cliente .' Chave invalida para Edicao';
@@ -363,7 +363,7 @@ if($cliente = buscar_cliente($conexao, $_GET['id'])){
                 <div class="control-group">
                     <label class="control-label">Telefone - (Opcional)</label>
                     <div class="controls">
-                        <input size="11" class="form-control" name="telefone2" type="text" value="<?php $cliente['telefone2']; ?>">
+                        <input size="11" class="form-control" name="telefone2" type="text" value="<?php echo $cliente['telefone2']; ?>">
                     </div>
 				</div>
 				

@@ -1,58 +1,38 @@
 html{ 
-    background-color:#e9ecef
 }
 
 body {
     
-    margin: 0 auto;
-    background-color: #566787;
+    
+    background-image: url("fundo.jpg");
+        
   }
 
- #botaocliente{
-     position: absolute;
-     right: 60%;
-     background: #e9ecef;
-     align-items: center;
-     align-content: center;
-     color: black
+ #btcliente{
+     
      
  }
 
- #botaoproduto{
-    position: absolute;
-    right: 31.8%;
-    background: #e9ecef;
-    align-items: center;
-    align-content: center;
-    color: black
+ #btproduto{
+  
     
 }
 
-#botaoservico{
-    position: absolute;
-    right: 60%;
-    background: #e9ecef;
-    align-items: center;
-    align-content: center;
-    color: black
+#btservico{
+  
     
 }
 
-#botaofuncionario{
-    position: absolute;
-    right: 30%;
-    background: #e9ecef;
-    align-items: center;
-    align-content: center;
-    color: black
+#btfuncionario{
+  
     
 }
 
-#botaoagendamento{
-    
-    justify-content: center;
-    background: #e9ecef;
-    align-content: center;
-    color: black;
-    margin-left: 450px
+#btagendamento{
+
+}
+img{
+    border-width: medium;
+  border-style: solid;
+  border-color: #000000;
 }
