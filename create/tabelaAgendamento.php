@@ -297,10 +297,10 @@ $(document).ready(function(){
                 <thead>
                     <tr>
 						<th>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span>
+							</span>-->
                         </th>
 						<th>Id do Agendamento</th>
 						<th>Cpf do Cliente</th>
@@ -315,10 +315,10 @@ $(document).ready(function(){
 					<?php foreach ($lista_agendamentos as $agendamento_info) : ?>
                     <tr>
 						<td>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
-							</span>
+							</span>-->
 						</td>
                        	<td><?php echo $agendamento_info['idAgendamento']; ?></td>
                         <td><?php echo $agendamento_info['Cliente_cpfCliente']; ?></td>

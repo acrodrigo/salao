@@ -272,8 +272,8 @@ $(document).ready(function(){
 					</div>
 					<div class="col-sm-12">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar novo Serviço</span></a>
-						<a href="#addEmployeeExp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicioanr Especialista</span></a>
-						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a>						
+						<a href="#addEmployeeExp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar Especialista</span></a>
+						<!--<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a> -->						
 						<a href="../cadastro.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>
 					</div>
                 </div>
@@ -282,10 +282,10 @@ $(document).ready(function(){
                 <thead>
                     <tr>
 						<th>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span>
+							</span> -->
                         </th>
                         <th>cpfFuncionario</th>
                         <th>Nome</th>
@@ -299,10 +299,10 @@ $(document).ready(function(){
 					<?php foreach ($lista_servicos as $servico_info ) : ?>
                     <tr>
 						<td>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
-							</span>
+							</span> -->
 						</td>
                         <td><?php echo $servico_info['idServico']; ?></td>
                         <td><?php echo $servico_info['nome']; ?></td>

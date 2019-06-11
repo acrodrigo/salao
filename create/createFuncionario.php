@@ -53,7 +53,7 @@
                 <!-- Telefone 2 -->
                 <div class="control-group">
                     
-                    <label class="control-label">Telefone - (Opicional)</label>
+                    <label class="control-label">Telefone - (Opcional)</label>
                     <div class="controls">
                         <input size="11" class="form-control" name="telefone2" type="text" >
                     </div>

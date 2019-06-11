@@ -272,7 +272,7 @@ $lista_tarefas = buscar_produtos($conexao);
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar novo Produto</span></a>
-						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a>						
+						<!--<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a>	-->					
 						<a href="../cadastro.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>
 					</div>
                 </div>
@@ -281,10 +281,10 @@ $lista_tarefas = buscar_produtos($conexao);
                 <thead>
                     <tr>
 						<th>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span>
+							</span>-->
                         </th>
                         <th>idProduto</th>
                         <th>Nome</th>
@@ -299,10 +299,10 @@ $lista_tarefas = buscar_produtos($conexao);
 					<?php foreach ($lista_tarefas as $produto) : ?>
                     <tr>
 						<td>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
-							</span>
+							</span>-->
 						</td>
                         <td><?php echo $produto['idProduto']; ?></td>
                         <td><?php echo $produto['nome']; ?></td>

@@ -272,7 +272,8 @@ $(document).ready(function(){
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar nova Nota</span></a>
-						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a>						
+						<!--<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remover</span></a>-->
+						<a href="../cadastro.php" class="btn btn-primary" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Voltar</span></a>							
 					</div>
                 </div>
             </div>
@@ -280,10 +281,10 @@ $(document).ready(function(){
                 <thead>
                     <tr>
 						<th>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span>
+							</span>-->
                         </th>
 						<th>idNota</th>
 						<th>Cpf do Cliente</th>
@@ -299,10 +300,10 @@ $(document).ready(function(){
 					<?php foreach ($lista_notas as $nota_info) : ?>
                     <tr>
 						<td>
-							<span class="custom-checkbox">
+							<!--<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
-							</span>
+							</span>-->
 						</td>
                        	<td><?php echo $nota_info['idNota']; ?></td>
                         <td><?php echo $nota_info['Cliente_cpfCliente']; ?></td>
