@@ -20,6 +20,10 @@
             <div>
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
             </div>
+            <!--<form class="form-horizontal" action="editar/confirmarLogin.php" method="post">-->
+            <!--<form class="form-horizontal" action="editar/confirmarLogin.php" method="post">-->
+            <!--<form class="form-horizontal" action="editar/confirmarLogin.php" method="post">-->
+                    
             <div class="form-actions">
                 <button type="submit">Login</button>
             </div>
