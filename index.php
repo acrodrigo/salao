@@ -11,6 +11,8 @@
         <img src="img/perfil.png" alt="perfil">  
 
         <!--<form class="form-horizontal" action="editar/confirmarLogin.php" method="post">-->
+        <!--<form class="form-horizontal" action="editar/confirmarLogin.php" method="post">-->
+        <!--<form class="form-horizontal" action="editar/confirmarLogin.php" method="post">-->
         <form class="form-horizontal" action="indexAlt.php" method="post">   
             <div>
                 <input type="text" name="usuario" id="email" placeholder="Digite seu login"> 
